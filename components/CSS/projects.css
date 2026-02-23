@@ -1,0 +1,190 @@
+/* ===================================================
+   CantiumCode Portfolio — Projects Styles
+   =================================================== */
+
+/* ---------- Projects ---------- */
+/* Featured */
+.featured-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  margin-bottom: 56px;
+  background: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.featured-project:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-hover);
+}
+
+.fp-content {
+  padding: 40px;
+}
+
+.fp-label {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.78rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.fp-title {
+  font-size: 1.45rem;
+  color: var(--text-heading);
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.fp-description {
+  background: var(--bg-subtle);
+  padding: 18px 20px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.fp-description strong {
+  color: var(--text-heading);
+  font-weight: 600;
+}
+
+.fp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.fp-tech li {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.fp-links {
+  display: flex;
+  gap: 14px;
+}
+
+.fp-links a {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.fp-links a:hover { color: var(--accent); }
+
+.fp-image {
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-light), var(--bg-subtle));
+}
+
+.fp-image-placeholder {
+  font-size: 5rem;
+  color: var(--accent);
+  opacity: 0.12;
+}
+
+/* Project Cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: var(--bg-white);
+  padding: 28px 24px;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  border: 1px solid var(--border);
+  cursor: default;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.pc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pc-folder {
+  font-size: 1.8rem;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+.pc-links {
+  display: flex;
+  gap: 10px;
+}
+
+.pc-links a {
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.pc-links a:hover { color: var(--accent); }
+
+.pc-title {
+  font-size: 1.05rem;
+  color: var(--text-heading);
+  font-weight: 600;
+  margin-bottom: 8px;
+  transition: var(--transition);
+  letter-spacing: -0.01em;
+}
+
+.project-card:hover .pc-title { color: var(--accent); }
+
+.pc-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 18px;
+  color: var(--text-secondary);
+}
+
+.pc-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pc-tech li {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 2px 8px;
+  border-radius: 12px;
+}

@@ -1,0 +1,21 @@
+/* ===================================================
+   CantiumCode Portfolio — Footer Styles
+   =================================================== */
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+.footer strong { color: var(--accent); font-weight: 600; }
+
+.footer-sub {
+  margin-top: 5px;
+  font-size: 0.72rem;
+  color: var(--text-light);
+}
