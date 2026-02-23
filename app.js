@@ -16,15 +16,6 @@
     }, 800);
   });
 
-  // ————— Wait for components to be injected before initializing —————
-  if (window.componentsLoaded) {
-    initApp();
-  } else {
-    document.addEventListener('componentsLoaded', initApp);
-  }
-
-  function initApp() {
-
   // ————— Navbar scroll behaviour —————
   const navbar = document.getElementById('navbar');
   let lastScroll = 0;
@@ -228,6 +219,4 @@
     // Start typing after loader + hero greeting fade-in
     setTimeout(typeWriter, 1200);
   }
-
-  } // end initApp
 })();
