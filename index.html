@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kent Adrian Sabayday | CantiumCode</title>
+  <meta name="description"
+    content="Full Stack Developer portfolio of Kent Adrian Sabayday — CantiumCode. Based in Butuan City, Philippines." />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- ======= Geometry Particle Background ======= -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ======= Loader ======= -->
+  <div id="loader" class="loader">
+    <div class="loader-logo">&lt;C /&gt;</div>
+  </div>
+
+  <!-- ======= Side Elements ======= -->
+  <div class="side-element left">
+    <ul class="side-social">
+      <li><a href="https://github.com/kenshi-ucl" target="_blank" aria-label="GitHub"><img src="./sources/github.png"
+            alt="GitHub"></a></li>
+      <li><a href="https://linkedin.com/in/KentSabayday" target="_blank" aria-label="LinkedIn"><img
+            src="./sources/linkedin.png" alt="LinkedIn"></a></li>
+      <li><a href="https://www.facebook.com/kentadrian.sabayday" target="_blank" aria-label="Facebook"><img
+            src="./sources/facebook.png" alt="Facebook"></a></li>
+      <li><a href="mailto:kentadrianpalaciosabayday@gmail.com" aria-label="Email"><img src="./sources/gmail.png" alt="Email"></a>
+      </li>
+    </ul>
+    <div class="side-line"></div>
+  </div>
+
+  <div class="side-element right">
+    <a href="mailto:kent.sabayday@urios.edu.ph" class="side-email">kent.sabayday@urios.edu.ph</a>
+    <div class="side-line"></div>
+  </div>
+
+  <!-- ======= Navigation ======= -->
+  <header id="navbar" class="navbar">
+    <nav class="nav-container">
+      <a href="#" class="nav-logo">&lt;C /&gt;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"><span class="nav-number"></span> About</a></li>
+        <li><a href="#experience"><span class="nav-number"></span> Experience</a></li>
+        <li><a href="#projects"><span class="nav-number"></span> Projects</a></li>
+        <li><a href="#achievements"><span class="nav-number"></span> Achievements</a></li>
+        <li><a href="#contact"><span class="nav-number"></span> Contact</a></li>
+        <li><a href="#" class="btn-resume" id="resumeBtn">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Component placeholders — loaded by component-loader.js -->
+    <div id="hero-component"></div>
+    <div id="about-component"></div>
+    <div id="experience-component"></div>
+    <div id="projects-component"></div>
+    <div id="achievements-component"></div>
+    <div id="contact-component"></div>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Kent Adrian Sabayday</strong></p>
+    <p class="footer-sub">Founded by Kent Adrian P. Sabayday &copy; 2026 All Rights Reserved</p>
+  </footer>
+
+  <script src="./components/component-loader.js"></script>
+  <script src="./components/particles.js"></script>
+  <script src="./components/JS/loader.js"></script>
+  <script src="./components/JS/navbar.js"></script>
+  <script src="./components/JS/tabs.js"></script>
+  <script src="./components/JS/scroll-reveal.js"></script>
+  <script src="./components/JS/smooth-scroll.js"></script>
+  <script src="./components/JS/contact-form.js"></script>
+  <script src="./components/JS/typewriter.js"></script>
+  <script src="./components/JS/resume.js"></script>
+</body>
+
+</html>

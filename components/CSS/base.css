@@ -1,0 +1,293 @@
+/* ===================================================
+   CantiumCode Portfolio — Base Styles
+   Variables, Reset, Canvas, Loader, Side Elements,
+   Buttons, Section Shared, Animations
+   =================================================== */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  /* 60% — Backgrounds */
+  --bg-primary: #FAFAF8;
+  --bg-white: #FFFFFF;
+  --bg-subtle: #F3F4F6;
+
+  /* 30% — Text & neutrals */
+  --text-heading: #1a1a2e;
+  --text-primary: #374151;
+  --text-secondary: #6B7280;
+  --text-light: #9CA3AF;
+
+  /* 10% — Accent (Indigo-blue family) */
+  --accent: #4F46E5;
+  --accent-hover: #4338CA;
+  --accent-light: #EEF2FF;
+  --accent-tint: rgba(79, 70, 229, 0.08);
+
+  /* Utility */
+  --border: #E5E7EB;
+  --border-hover: #D1D5DB;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+
+  /* Fonts */
+  --font-main: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'DM Mono', 'Consolas', monospace;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* Layout */
+  --nav-height: 72px;
+  --transition: all 0.2s ease;
+  --transition-slow: all 0.35s ease;
+  --border-radius: 8px;
+  --border-radius-lg: 14px;
+  --max-width: 1280px;
+}
+
+/* ---------- Geometry Particle Canvas ---------- */
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure all content sits above the canvas */
+.loader        { z-index: 9999; }
+.side-element  { z-index: 50; }
+.navbar        { z-index: 1000; }
+main, footer   { position: relative; z-index: 1; }
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul { list-style: none; }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Loader ---------- */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-white);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-logo {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  color: var(--accent);
+  font-weight: 500;
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.97); }
+}
+
+/* ---------- Side Elements ---------- */
+.side-element {
+  position: fixed;
+  bottom: 0;
+  width: 40px;
+  z-index: 50;
+}
+
+.side-element.left { left: 32px; }
+.side-element.right { right: 32px; }
+
+.side-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-social li {
+  line-height: 0;
+}
+
+.side-social img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.side-social a {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  padding: 5px;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.side-social a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.side-email {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  writing-mode: vertical-rl;
+  transition: var(--transition);
+}
+
+.side-email:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.side-line {
+  width: 1px;
+  height: 80px;
+  background: var(--border);
+  margin: 14px auto 0;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 13px 28px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-outline {
+  border: 1.5px solid var(--border);
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-tint);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+}
+
+/* ---------- Section Shared ---------- */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  color: var(--text-heading);
+  font-weight: 700;
+  margin-bottom: 48px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  flex: 1;
+  max-width: 260px;
+  height: 1px;
+  background: var(--border);
+  margin-left: 16px;
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* ---------- Animations ---------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hero always animates on load */
+.hero .fade-up {
+  animation: heroFadeUp 0.8s ease forwards;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}

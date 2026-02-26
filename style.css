@@ -1,0 +1,23 @@
+/* ===================================================
+   CantiumCode Portfolio — Kent Adrian Sabayday
+   Modern Minimal Design — Color Theory (60-30-10)
+   
+   PALETTE (Analogous warm neutrals + blue accent):
+   60% — Warm off-white backgrounds (#FAFAF8, #FFFFFF)
+   30% — Charcoal text & dark elements (#1a1a2e, #374151)
+   10% — Slate blue accent (#4F46E5) for CTAs & highlights
+
+   This file imports all component-level stylesheets.
+   Order matters — base first, responsive last.
+   =================================================== */
+
+@import url('./components/css/base.css');
+@import url('./components/css/navbar.css');
+@import url('./components/css/hero.css');
+@import url('./components/css/about.css');
+@import url('./components/css/experience.css');
+@import url('./components/css/projects.css');
+@import url('./components/css/achievements.css');
+@import url('./components/css/contact.css');
+@import url('./components/css/footer.css');
+@import url('./components/css/responsive.css');
